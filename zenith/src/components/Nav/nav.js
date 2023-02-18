@@ -23,12 +23,22 @@ import { useNavigate } from 'react-router-dom';
 
 export default function BasicMenu(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    console.log(event.currentTarget);
+  // const open = Boolean(anchorEl);
+  var [openBooleanArray, setOpenBooleanArray] = React.useState(props.details.map((value, index) => {
+    return false;
+  }));
+  // setOpenBooleanArray(props.details.map((value, index) => {
+  //   return false;
+  // }), [anchorEl])
+
+  const handleClick = (event, index) => {
     setAnchorEl(event.currentTarget);
+    openBooleanArray[index] = true;
+    setOpenBooleanArray(openBooleanArray);
   };
-  const handleClose = () => {
+  const handleClose = (index) => {
+    openBooleanArray[index] = false;
+    setOpenBooleanArray(openBooleanArray);
     setAnchorEl(null);
   };
   const navigate = useNavigate();
@@ -36,7 +46,8 @@ export default function BasicMenu(props) {
     console.log(href);
     navigate(href);
   }
-  console.log(props.details);
+
+  console.log(openBooleanArray);
   return (
     <>
       <div className="nav-bar">
@@ -45,26 +56,26 @@ export default function BasicMenu(props) {
           <>
             <Button sx={{ color: "white" }}
               id="basic-button"
-              aria-controls={open ? 'basic-menu' : undefined}
+              aria-controls={openBooleanArray[index] ? 'basic-menu' : undefined}
               aria-haspopup="true"
-              aria-expanded={open ? 'true' : undefined}
-              onClick={handleClick}
+              aria-expanded={openBooleanArray[index] ? 'true' : undefined}
+              onClick={(event) => {
+                handleClick(event, index);
+              }}
             >
               {value.title}
             </Button>
             <Menu
-              id="basic-menu"
+              key={value.title + index}
               anchorEl={anchorEl}
-              open={open}
-              onClose={handleClose}
+              open={openBooleanArray[index]}
+              onClose={() => { handleClose(index) }}
               MenuListProps={{
                 'aria-labelledby': 'basic-button',
               }}
             >
-              {value.components.map((val) => {
-                console.log(val);
-                return (<MenuItem onClick={(event) => { console.log("SHreuash"); handleMenuItemClick(val.href) }}>{val.title}</MenuItem>)
-              })}
+              {value.components.map((val, index) => (<MenuItem key={val.title + index} onClick={(event) => { console.log(event); handleMenuItemClick(val.href) }}>{val.title}</MenuItem>)
+              )}
             </Menu>
 
           </>
