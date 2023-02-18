@@ -1,0 +1,5 @@
+base = {
+  workspace = sachanv_Harmony-sachanv-first-app;
+  versionSet = live;
+};
+packages = { Harmony-sachanv-first-app-1.0 = .; };
