@@ -1,6 +1,13 @@
-function PressRelease(params) {
-    return(<>
-    <h1>I am pressss</h1>
-    </>)
+import React from 'react'
+
+const pressRelease = function pressRelease() {
+  return (
+    <div>
+      <h1>I am PressRelease</h1>
+    </div>
+  )
 }
-export default PressRelease;
+
+export default pressRelease
+
+

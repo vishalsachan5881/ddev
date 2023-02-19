@@ -5,15 +5,15 @@ const navData = [
         components: [
             {
                 title: "OverView",
-                href: "/Home",
+                href: "/",
             },
             {
                 title: "PressRelease",
-                href: "/Customer",
+                href: "/PressRelease",
             },
             {
                 title: "FAQ",
-                href: "/Utility",
+                href: "/FAQ",
             },
         ]
     },
@@ -22,15 +22,27 @@ const navData = [
         href: "",
         components: [
             {
-                title: "OverView",
+                title: "Onboarding",
+                href: "/",
+            },
+            {
+                title: "Dashboards",
                 href: "",
             },
             {
-                title: "PressRelease",
+                title: "Programs",
                 href: "",
             },
             {
-                title: "Random",
+                title: "Learning Materials",
+                href: "",
+            },
+            {
+                title: "DE Expunge",
+                href: "",
+            },
+            {
+                title: "IMR",
                 href: "",
             },
         ]
@@ -40,15 +52,7 @@ const navData = [
         href: "",
         components: [
             {
-                title: "OverView",
-                href: "",
-            },
-            {
-                title: "PressRelease",
-                href: "",
-            },
-            {
-                title: "FAQ",
+                title: "Contact Us",
                 href: "",
             },
         ]
@@ -58,15 +62,19 @@ const navData = [
         href: "",
         components: [
             {
-                title: "OverView",
+                title: "High Level Design",
                 href: "",
             },
             {
-                title: "PressRelease",
+                title: "Details Design",
                 href: "",
             },
             {
-                title: "FAQ",
+                title: "Oncall",
+                href: "",
+            },
+            {
+                title: "Failure Model",
                 href: "",
             },
         ]
@@ -76,17 +84,10 @@ const navData = [
         href: "",
         components: [
             {
-                title: "OverView",
-                href: "",
+                title: "Utility",
+                href: "/Utility",
             },
-            {
-                title: "PressRelease",
-                href: "",
-            },
-            {
-                title: "FAQ",
-                href: "",
-            },
+           
         ]
     }
 ]
