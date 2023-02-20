@@ -74,7 +74,7 @@ export default function BasicMenu(props) {
                 'aria-labelledby': 'basic-button',
               }}
             >
-              {value.components.map((val, index) => (<MenuItem key={val.title + index} onClick={(event) => { console.log(event); handleMenuItemClick(val.href) }}>{val.title}</MenuItem>)
+              {value.components.map((val, index) => (<MenuItem key={val.title + index} onClick={(event) => {  handleMenuItemClick(val.href) }}>{val.title}</MenuItem>)
               )}
             </Menu>
 

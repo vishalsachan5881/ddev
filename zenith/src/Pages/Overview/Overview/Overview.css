@@ -1,0 +1,13 @@
+div#HZenith-RBSDataandAnalyticsPlatform {
+    margin-top: 2%;
+}
+.Head{
+    font-size: 18px;
+    line-height: 100%;
+    font-weight: 600;
+    border-bottom: 1px solid maroon;
+    text-align: center;
+    border-top: 1px solid maroon;
+    color: maroon;
+    background-color: whitesmoke;
+}
