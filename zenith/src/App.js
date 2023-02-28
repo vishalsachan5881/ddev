@@ -13,6 +13,9 @@ import FAQ from '/Users/sachanv/Desktop/ddev/zenith/src/Pages/Overview/Faq/faq.j
 import Utility from './Pages/Utilities/Utilities';
 import Overview from './Pages/Overview/Overview/Overview';
 import AutoTableOnboarding from './Pages/AutoTableOnboarding/AutoTableOnboarding';
+import OnCallAdmin from './Pages/OnCallAdmin/OnCallAdmin';
+import LiveJobs from './Pages/OnCallAdmin/LiveJobs/LiveJobs';
+import MonitorJob from './Pages/OnCallAdmin/MonitorJobs/MonitorJob';
 function App() {
   
   return (
@@ -20,6 +23,7 @@ function App() {
       <BrowserRouter>
 
         <div className='zenith-header'>
+         
           <div className='zenith-home-Heading'>Zenith</div>
           <div className='zenith-header-subtitle'>Data and Analytics Platform</div>
           <BasicMenu details = {navData}/>
@@ -33,6 +37,11 @@ function App() {
           <Route path='/Utility' element={<Utility/>}></Route>
           <Route path='/AutoTableOnboarding' element={<AutoTableOnboarding/>}></Route>
 
+          {/* OnCallAdmin */}
+          <Route path='/OnCallAdmin' element={<OnCallAdmin/>}></Route>
+          <Route path='/OnCallAdmin/LiveJobs' element={<LiveJobs/>}></Route>
+          <Route path='/OnCallAdmin/MonitorJobs' element={<MonitorJob/>}></Route>
+          
         </Routes>
 
       </BrowserRouter>

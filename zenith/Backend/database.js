@@ -5,3 +5,4 @@ const db = mysql.createConnection({
     password : 'Vishal@5881',
     database:'localAndes'
 })
+

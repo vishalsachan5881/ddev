@@ -15,9 +15,9 @@ const CardData = [
     href : "/AutoTableOnboarding"
 },
 {
-    title : "Auto Table-Onboarding",
+    title : "OnCall-Admin",
     description : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique assumenda modi fuga unde quos fugit ullam quia, natus quibusdam incidunt libero blanditiis reprehenderit praesentium illo, ipsum nemo numquam. Aspernatur, cum.",
-    href : "/AutoTableOnboarding"
+    href : "/OnCallAdmin"
 },
 {
     title : "Auto Table-Onboarding",

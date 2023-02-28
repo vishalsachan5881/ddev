@@ -19,7 +19,7 @@ const Card = (props)=>{
             <p className="card-title">{value.title}</p>
             <p className="description">{value.description}</p>
         </div>
-        <Button variant="contained"sx={{m: 2}} onClick={(event)=>{handleMenuItemClick(value.href)}}   >Contained</Button>
+        <Button variant="contained"sx={{m: 2}} onClick={(event)=>{handleMenuItemClick(value.href)}}   >Explore</Button>
         
     </div>
     
